@@ -1,0 +1,18 @@
+@import '../variables.css';
+
+.NameTag {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  padding-left: 30px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: var(--fw-bold);
+}

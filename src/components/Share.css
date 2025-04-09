@@ -1,0 +1,63 @@
+@import '../variables.css';
+
+.share {
+  width: auto;
+  height: auto;
+}
+
+
+.share-trigger {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.share-icon {
+  background-color: var(--clr-grayishBlue);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  object-fit: none;
+
+}
+
+.share-popup {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  /* bottom: 50px; */
+  right: 160px;
+  /* top: 10px; */
+  background-color: var(--clr-desaturatedDarkBlue);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+
+.share-popup::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 10px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent var(--clr-desaturatedDarkBlue) transparent;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s;
+}
+
+.social-link:hover img {
+  opacity: 0.8;
+}

@@ -1,0 +1,16 @@
+@import '../variables.css';
+
+.card-text {
+  margin: 20px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--clr-veryDarkGrayishBlue);
+}
+
+p {
+  font-size: 10px;
+  color: var(--clr-desaturatedDarkBlue);
+}

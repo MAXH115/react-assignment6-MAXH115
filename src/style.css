@@ -6,43 +6,72 @@
  * Source: https://www.joshwcomeau.com/css/custom-css-reset/
 */
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 /* 2. Remove default margin */
 * {
   margin: 0;
 }
+
 body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
+
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
+
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
+
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
+
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
+
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -51,10 +80,103 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /** Attribution CSS **/
-.attribution { 
-  font-size: 13px; 
-  text-align: center; 
+.attribution {
+  font-size: 13px;
+  text-align: center;
 }
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* src/style.css */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  background-color: var(--clr-lightGrayishBlue);
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0;
+  margin: 20vh;
+  /* width: 60vw;
+  height: 40vh; */
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-content {
+  background-color: white;
+  padding: 0px;
+  font-weight: var(--fw-regular);
+  font-size: 10px;
+}
+
+.bottombar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-right: 40px;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 90vw;
+    margin: 20px 0;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card-content {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .bottombar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+
+  .btncontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .rightcard {
+    margin: 20px;
+  }
 }
